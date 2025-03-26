@@ -38,7 +38,7 @@ function App() {
   // Obtener usuarios via SOAP
   const fetchUsersSOAP = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/soap', 
+      const response = await axios.post('http://localhost:3000/soap/service', 
         `<?xml version="1.0" encoding="UTF-8"?>
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
                           xmlns:user="http://example.com/user-service">
@@ -83,7 +83,7 @@ function App() {
   // Crear usuario via SOAP
   const createUserSOAP = async () => {
     try {
-      await axios.post('http://localhost:3000/soap', 
+      await axios.post('http://localhost:3000/soap/service', 
         `<?xml version="1.0" encoding="UTF-8"?>
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
                           xmlns:user="http://example.com/user-service">
